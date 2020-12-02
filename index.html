@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <title>My Chart</title>
+</head>
+<body>
+<div class="container">
+    <canvas id="covidChart"></canvas>
+</div>
+
+<script>
+    let covidChart = document.getElementById('covidChart').getContext('2d');
+    
+    let covidInfoChart = new Chart(covidChart, {
+        type:'line',
+        data:{
+            labels:['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets:[{
+                label:'Cases',
+                data:[
+                    20,
+                    200,
+                    2000,
+                    1321,
+                    2121,
+                    4421,
+                    3513,
+                    1231,
+                    1211,
+                    1313,
+                    1515,
+                    3232
+                ],
+
+                backgroundColor:'lightblue',
+                borderColor:'black',
+                hoverBorderWidth:3,
+                hoverBorderColor:'black'
+            }]
+        },
+        options:{}
+    });
+
+</script>
+
+</body>
+</html>
